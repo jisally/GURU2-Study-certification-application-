@@ -52,8 +52,7 @@ class Login : AppCompatActivity() {
                 // 로그인 성공 다이얼로그
                 dialog("success")
 
-                val intent = Intent(this, MainMenu::class.java)
-                startActivity(intent)
+                
             }
             else{
                 // 로그인 실패 다이얼로그
