@@ -4,6 +4,10 @@
     package="com.example.gurufin">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -15,6 +19,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GuruFin"
         tools:targetApi="31">
+        <activity
+            android:name="com.example.gurufin.TargetAdd"
+            android:exported="false"
+            android:label="@string/target_add"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.example.gurufin.Indiviualstudy"
+            android:exported="false"
+            android:label="@string/indiviualstudy" />
+        <activity
+            android:name="com.example.gurufin.TargetMain"
+            android:exported="true"
+            android:label="@string/target_title" />
         <activity
             android:name=".calendar"
             android:exported="false" />
