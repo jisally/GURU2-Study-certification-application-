@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Studio/GuruFin/app/src/main/res/layout/activity_calendar.xml" value="0.1" />
+        <entry key="..\:/Android Studio/GuruFin/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/GURU/GuruFin/app/src/main/res/layout/activity_login.xml" value="0.22826086956521738" />
         <entry key="..\:/GURU/GuruFin/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
         <entry key="..\:/GURU/GuruFin/app/src/main/res/layout/activity_main_menu.xml" value="0.25364583333333335" />
