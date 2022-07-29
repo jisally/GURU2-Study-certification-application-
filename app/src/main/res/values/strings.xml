@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">GuruFin</string>
+    <string name="calendar">달력</string>
+    <string name="indiviualstudy">공부인증</string>
+    <string name="translate">번역</string>
+
 </resources>
