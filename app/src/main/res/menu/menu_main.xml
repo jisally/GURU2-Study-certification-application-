@@ -2,9 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/calendar"
-        android:title="달력" />
-    <item
         android:id="@+id/indiviualstudy"
         android:title="공부인증" />
     <item

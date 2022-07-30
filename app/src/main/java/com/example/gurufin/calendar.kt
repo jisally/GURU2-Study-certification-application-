@@ -1,11 +1,14 @@
 package com.example.gurufin
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import java.io.FileInputStream
 import java.io.FileOutputStream
 
 import android.view.View
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.CalendarView
 import android.widget.EditText
@@ -18,11 +21,11 @@ class calendar : AppCompatActivity() {
     lateinit var str: String
     lateinit var calendarView: CalendarView
     lateinit var updateBtn: Button
-    lateinit var deleteBtn:Button
-    lateinit var saveBtn:Button
+    lateinit var deleteBtn: Button
+    lateinit var saveBtn: Button
     lateinit var diaryTextView: TextView
-    lateinit var diaryContent:TextView
-    lateinit var title:TextView
+    lateinit var diaryContent: TextView
+    lateinit var title: TextView
     lateinit var contextEditText: EditText
 
 
@@ -30,15 +33,16 @@ class calendar : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calendar)
 
+
         // UI값 생성
-        calendarView=findViewById(R.id.calendarView)
-        diaryTextView=findViewById(R.id.diaryTextView)
-        saveBtn=findViewById(R.id.saveBtn)
-        deleteBtn=findViewById(R.id.deleteBtn)
-        updateBtn=findViewById(R.id.updateBtn)
-        diaryContent=findViewById(R.id.diaryContent)
-        title=findViewById(R.id.title)
-        contextEditText=findViewById(R.id.contextEditText)
+        calendarView = findViewById(R.id.calendarView)
+        diaryTextView = findViewById(R.id.diaryTextView)
+        saveBtn = findViewById(R.id.saveBtn)
+        deleteBtn = findViewById(R.id.deleteBtn)
+        updateBtn = findViewById(R.id.updateBtn)
+        diaryContent = findViewById(R.id.diaryContent)
+        title = findViewById(R.id.title)
+        contextEditText = findViewById(R.id.contextEditText)
 
         title.text = "HakerSwunies Calendar"
 
@@ -65,6 +69,8 @@ class calendar : AppCompatActivity() {
             diaryContent.visibility = View.VISIBLE
         }
     }
+
+
 
     // 달력 내용 조회, 수정
     fun checkDay(cYear: Int, cMonth: Int, cDay: Int, userID: String) {
@@ -116,6 +122,8 @@ class calendar : AppCompatActivity() {
     }
 
 
+
+
     // 달력 내용 제거
     @SuppressLint("WrongConstant")
     fun removeDiary(readDay: String?) {
@@ -144,4 +152,23 @@ class calendar : AppCompatActivity() {
             e.printStackTrace()
         }
     }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item?.itemId) {
+            R.id.indiviualstudy -> {
+                val intent = Intent(this, TargetMain::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.translate -> {
+                val intent = Intent(this, translate::class.java)
+                startActivity(intent)
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)}
 }
