@@ -30,7 +30,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 
-class Indiviualstudy : AppCompatActivity() {
+class Individualstudy : AppCompatActivity() {
     lateinit var imageView: ImageView
     lateinit var imageText: TextView
     lateinit var goBtn: Button
@@ -62,11 +62,11 @@ class Indiviualstudy : AppCompatActivity() {
         val pathReference = storageReference!!.child("myImages")
 
         if (pathReference == null) {
-            Toast.makeText(this@Indiviualstudy, "사진을 등록해 주세요.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@Individualstudy, "사진을 등록해 주세요.", Toast.LENGTH_SHORT).show()
         } else {
             val submitProfile = storageReference!!.child("myImages/image")
             submitProfile.downloadUrl.addOnSuccessListener { uri ->
-                Glide.with(this@Indiviualstudy).load(uri)
+                Glide.with(this@Individualstudy).load(uri)
                     .into(imageView)
             }
             imageText.visibility=View.INVISIBLE

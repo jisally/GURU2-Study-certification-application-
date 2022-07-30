@@ -31,7 +31,7 @@
             android:label="@string/target_add"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Indiviualstudy"
+            android:name=".Individualstudy"
             android:exported="false"
             android:label="@string/indiviualstudy" />
         <activity

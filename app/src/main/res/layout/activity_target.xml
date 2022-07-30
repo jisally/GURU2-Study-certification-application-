@@ -31,7 +31,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:maxImageSize="25sp"
-        app:srcCompat="@drawable/ic_baseline_create_24" />
+        app:srcCompat="@drawable/ic_baseline_create_24"
+        tools:ignore="DuplicateClickableBoundsCheck,DuplicateClickableBoundsCheck,SpeakableTextPresentCheck" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addPicBtn"
@@ -47,7 +48,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:maxImageSize="25sp"
-        app:srcCompat="@drawable/ic_baseline_camera_alt_24" />
+        app:srcCompat="@drawable/ic_baseline_camera_alt_24"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addBtn"
@@ -61,6 +63,7 @@
         app:borderWidth="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_baseline_add_24" />
+        app:srcCompat="@drawable/ic_baseline_add_24"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

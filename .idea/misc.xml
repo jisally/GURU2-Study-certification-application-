@@ -3,19 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Android Studio/GuruFin/app/src/main/res/layout/activity_calendar.xml" value="0.1" />
-        <entry key="..\:/Android Studio/GuruFin/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/GURU/GuruFin/app/src/main/res/layout/activity_add.xml" value="0.25364583333333335" />
+        <entry key="..\:/GURU/GuruFin/app/src/main/res/layout/activity_calendar.xml" value="0.25364583333333335" />
         <entry key="..\:/GURU/GuruFin/app/src/main/res/layout/activity_login.xml" value="0.22826086956521738" />
         <entry key="..\:/GURU/GuruFin/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
         <entry key="..\:/GURU/GuruFin/app/src/main/res/layout/activity_main_menu.xml" value="0.25364583333333335" />
+        <entry key="..\:/GURU/GuruFin/app/src/main/res/layout/activity_pic.xml" value="0.20199275362318841" />
         <entry key="..\:/GURU/GuruFin/app/src/main/res/layout/activity_register.xml" value="0.22826086956521738" />
+        <entry key="..\:/GURU/GuruFin/app/src/main/res/layout/activity_target.xml" value="0.25364583333333335" />
+        <entry key="..\:/GURU/GuruFin/app/src/main/res/layout/activity_translate.xml" value="0.25364583333333335" />
+        <entry key="..\:/GURU/GuruFin/app/src/main/res/layout/item_recycler.xml" value="0.25364583333333335" />
         <entry key="..\:/GURU/GuruFin/app/src/main/res/menu/menu_main.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/82107/Documents/GitHub/GuruFin/app/src/main/res/layout/activity_main_menu.xml" value="0.34739583333333335" />
-        <entry key="..\:/Users/82107/Documents/GitHub/GuruFin/app/src/main/res/menu/menu_main.xml" value="0.1" />
-        <entry key="..\:/Users/riblh/AndroidStudioProjects/GuruFin/app/src/main/res/drawable-v24/edit_round.xml" value="0.1" />
-        <entry key="..\:/Users/riblh/AndroidStudioProjects/GuruFin/app/src/main/res/layout/activity_add.xml" value="0.1" />
-        <entry key="..\:/Users/riblh/AndroidStudioProjects/GuruFin/app/src/main/res/layout/activity_calendar.xml" value="0.20199275362318841" />
-        <entry key="..\:/Users/riblh/AndroidStudioProjects/GuruFin/app/src/main/res/layout/activity_pic.xml" value="0.1" />
       </map>
     </option>
   </component>

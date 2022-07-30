@@ -159,7 +159,7 @@ class calendar : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item?.itemId) {
-            R.id.indiviualstudy -> {
+            R.id.individualstudy -> {
                 val intent = Intent(this, TargetMain::class.java)
                 startActivity(intent)
                 return true

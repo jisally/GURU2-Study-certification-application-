@@ -80,7 +80,7 @@ class TargetMain : AppCompatActivity() {
         addPicBtn = findViewById(R.id.addPicBtn)
         binding.addPicBtn.setOnClickListener {
             toggleFab()
-            startActivity(Intent(this@TargetMain, Indiviualstudy::class.java))
+            startActivity(Intent(this@TargetMain, Individualstudy::class.java))
         }
 
         //목표 추가
