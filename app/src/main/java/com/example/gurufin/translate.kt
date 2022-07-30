@@ -108,20 +108,14 @@ class translate : Activity() {
         }
         layout.addView(trans)
 
-        val maker = TextView(this)
-        maker.text = "\n© 2022 GURU2 Hackerswu.\n"
-        maker.textSize = 13f
-        maker.setTextColor(Color.BLACK)
-        maker.gravity = Gravity.CENTER
-        layout.addView(maker)
-
         val pad = dip2px(20)
         layout.setPadding(pad, pad, pad, pad)
         val scroll = ScrollView(this)
         scroll.addView(layout)
         setContentView(scroll)
     }
-
+    
+    //네이버 파파고 번역 API 연동
     private fun translate(lang1: String, lang2: String, value: String): String {
         try {
             val url = URL("https://openapi.naver.com/v1/papago/n2mt")
@@ -129,7 +123,7 @@ class translate : Activity() {
             con.requestMethod = "POST"
             con.connectTimeout = 5000
             con.doOutput = true
-            con.setRequestProperty("X-Naver-Client-Id", "zDnrALmdNiQMJwZcV0rU")
+            con.setRequestProperty("X-Naver-Client-Id", "zDnrALmdNiQMJwZcV0rU") //고유한 ID와 key를 할당받아서 사용
             con.setRequestProperty("X-Naver-Client-Secret", "iCy1TVsUPm")
             val dos = DataOutputStream(con.outputStream)
             dos.write(("source=" + lang1 + "&target=" + lang2 + "&text=" + URLEncoder.encode(value, "UTF-8")).toByteArray(
@@ -154,6 +148,31 @@ class translate : Activity() {
     private fun dip2px(dips: Int): Int {
         return Math.ceil((dips * this.resources.displayMetrics.density).toDouble()).toInt()
     }
+    
+    //메뉴 
+   override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return true
+    }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item?.itemId) {
+            R.id.calendar -> {
+                val intent = Intent(this, calendar::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.indiviualstudy -> {
+                val intent = Intent(this, TargetMain::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.translate -> {
+                val intent = Intent(this, translate::class.java)
+                startActivity(intent)
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)}
 }
 
