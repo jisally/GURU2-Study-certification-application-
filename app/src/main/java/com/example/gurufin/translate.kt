@@ -1,10 +1,13 @@
 package com.example.gurufin
 
 import android.app.Activity
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.os.StrictMode
 import android.view.Gravity
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.*
 import org.json.JSONObject
@@ -162,7 +165,7 @@ class translate : Activity() {
                 startActivity(intent)
                 return true
             }
-            R.id.indiviualstudy -> {
+            R.id.targetMain -> {
                 val intent = Intent(this, TargetMain::class.java)
                 startActivity(intent)
                 return true

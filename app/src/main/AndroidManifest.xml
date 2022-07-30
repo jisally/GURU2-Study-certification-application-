@@ -13,6 +13,7 @@
         android:required="true" />
 
     <application
+        android:name="com.example.gurufin.config.ApplicationClass"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -36,7 +37,7 @@
             android:label="@string/indiviualstudy" />
         <activity
             android:name=".TargetMain"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/target_title" />
         <activity
             android:name=".calendar"

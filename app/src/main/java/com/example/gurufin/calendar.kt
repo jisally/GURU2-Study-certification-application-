@@ -166,7 +166,7 @@ class calendar : AppCompatActivity() {
                 startActivity(intent)
                 return true
             }
-            R.id.indiviualstudy -> {
+            R.id.targetMain -> {
                 val intent = Intent(this, TargetMain::class.java)
                 startActivity(intent)
                 return true
