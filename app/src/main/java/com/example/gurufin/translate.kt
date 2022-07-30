@@ -25,7 +25,7 @@ class translate : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        StrictMode.enableDefaults()
+         StrictMode.enableDefaults()
         val names = arrayOf("한국어", "영어", "일본어", "중국어 (간체)", "중국어 (번체)", "스페인어", "프랑스어", "베트남어", "태국어", "인도네시아어");
         val codes = arrayOf("ko", "en", "ja", "zh-CN", "zh-TW", "es", "fr", "vi", "th", "id");
         val langs = arrayOf(0, 0)
@@ -153,29 +153,30 @@ class translate : Activity() {
     }
     
     //메뉴 
-   override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_main, menu)
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main,menu)
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item?.itemId) {
-            R.id.calendar -> {
-                val intent = Intent(this, calendar::class.java)
+        when(item?.itemId){
+            R.id.targetMain ->{
+                val intent =Intent(this,TargetMain::class.java)
                 startActivity(intent)
                 return true
             }
-            R.id.targetMain -> {
-                val intent = Intent(this, TargetMain::class.java)
+            R.id.translate ->{
+                val intent =Intent(this,translate::class.java)
                 startActivity(intent)
                 return true
             }
-            R.id.translate -> {
-                val intent = Intent(this, translate::class.java)
+            R.id.calendar ->{
+                val intent =Intent(this,calendar::class.java)
                 startActivity(intent)
                 return true
             }
         }
-        return super.onOptionsItemSelected(item)}
+        return super.onOptionsItemSelected(item)
+    }
 }
 

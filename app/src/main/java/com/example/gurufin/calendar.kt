@@ -154,28 +154,29 @@ class calendar : AppCompatActivity() {
     }
     
     //메뉴
-     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_main, menu)
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main,menu)
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item?.itemId) {
-            R.id.calendar -> {
-                val intent = Intent(this, calendar::class.java)
+        when(item?.itemId){
+            R.id.targetMain ->{
+                val intent =Intent(this,TargetMain::class.java)
                 startActivity(intent)
                 return true
             }
-            R.id.targetMain -> {
-                val intent = Intent(this, TargetMain::class.java)
+            R.id.translate ->{
+                val intent =Intent(this,translate::class.java)
                 startActivity(intent)
                 return true
             }
-            R.id.translate -> {
-                val intent = Intent(this, translate::class.java)
+            R.id.calendar ->{
+                val intent =Intent(this,calendar::class.java)
                 startActivity(intent)
                 return true
             }
         }
-        return super.onOptionsItemSelected(item)}
+        return super.onOptionsItemSelected(item)
+    }
 }

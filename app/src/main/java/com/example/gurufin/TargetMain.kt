@@ -3,6 +3,8 @@ package com.example.gurufin
 import android.animation.ObjectAnimator
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
@@ -135,6 +137,33 @@ class TargetMain : AppCompatActivity() {
             addBtn.setImageResource(R.drawable.ic_baseline_close_24)
         }
         isFabOpen =!isFabOpen
+    }
+
+    //메뉴
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main,menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item?.itemId){
+            R.id.targetMain ->{
+                val intent =Intent(this,TargetMain::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.translate ->{
+                val intent =Intent(this,translate::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.calendar ->{
+                val intent =Intent(this,calendar::class.java)
+                startActivity(intent)
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 
 }
