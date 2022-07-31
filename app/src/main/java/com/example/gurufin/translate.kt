@@ -95,6 +95,9 @@ class translate : Activity() {
         layout.addView(txt4)
 
         trans.text = "번역"
+        trans.setBackgroundColor(Color.rgb(131,36,255))
+        trans.setTextColor(Color.WHITE)
+        trans.setTextSize(19f)
         trans.setOnClickListener {
             val input = txt2.text.toString().trim()
             if (input == "") {
