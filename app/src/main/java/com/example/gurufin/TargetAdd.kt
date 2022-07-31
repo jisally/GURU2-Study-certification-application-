@@ -37,6 +37,7 @@ class TargetAdd : AppCompatActivity() {
             binding.eraseBtn.visibility = View.VISIBLE
         }
 
+        //삭제버튼
         binding.eraseBtn.setOnClickListener {
             val title = binding.editTitle.text.toString()
             val content = binding.editContents.text.toString()
@@ -48,7 +49,7 @@ class TargetAdd : AppCompatActivity() {
 
                 val intent = Intent().apply {
                     putExtra("target", target)
-                    putExtra("flag", 2)
+                    putExtra("flag", 2) //flag=2
                 }
                 setResult(RESULT_OK, intent)
                 finish()
@@ -87,6 +88,7 @@ class TargetAdd : AppCompatActivity() {
         }
     }
 
+    //뒤로가기
     override fun onBackPressed() {
         startActivity(Intent(this, TargetMain::class.java))
         finish()

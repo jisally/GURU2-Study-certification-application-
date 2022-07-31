@@ -59,6 +59,7 @@ class Individualstudy : AppCompatActivity() {
         firebaseStore = FirebaseStorage.getInstance()
         storageReference = FirebaseStorage.getInstance().reference
 
+        //사진 로드
         val pathReference = storageReference!!.child("myImages")
 
         if (pathReference == null) {
@@ -123,7 +124,7 @@ class Individualstudy : AppCompatActivity() {
     /////////////////////////////////////////////////////
     /////////////////////////////////////////////////////
 
-
+    //카메라 촬영해서 업로드
     fun createImageUri(filename:String, mimeType:String):Uri?{
         var values = ContentValues()
         values.put(MediaStore.Images.Media.DISPLAY_NAME,filename)
@@ -165,6 +166,7 @@ class Individualstudy : AppCompatActivity() {
     /////////////////////////////////////////////////////
     /////////////////////////////////////////////////////
 
+    //갤러리에서 업로드
     private fun launchGallery() {
         val intent = Intent()
         intent.type = "image/*"
@@ -195,9 +197,10 @@ class Individualstudy : AppCompatActivity() {
         }
     }
 
+    //폴더에 사진 업로드
     private fun uploadImage(){
         if(filePath != null){
-            val ref = storageReference?.child("myImages/image") //폴더 이름 날짜로 저장하기
+            val ref = storageReference?.child("myImages/image")
             val uploadTask = ref?.putFile(filePath!!)
 
         }else{
@@ -210,14 +213,14 @@ class Individualstudy : AppCompatActivity() {
     /////////////////////////////////////////////////////
     /////////////////////////////////////////////////////
 
-    //ActivityCompat Class를 사용해서 카메라 사용 권한을 요청합니다.
+    //ActivityCompat Class를 사용해서 카메라 사용 권한을 요청
     private fun requestPermission(){
         ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE,CAMERA,
             WRITE_EXTERNAL_STORAGE),1)
 
     }
 
-    //checkPermission() 함수는 권한 여부를 확인할 수 있습니다.
+    //checkPermission() 함수는 권한 여부를 확인
     private fun checkPermission():Boolean{
         return (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
                 == PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(this,
@@ -226,9 +229,9 @@ class Individualstudy : AppCompatActivity() {
 
     }
 
-    //onRequestPermissionsResult() 함수를 override 후 권한 승인에 따른 이벤트를 확인할 수 있습니다.
-    //즉 권한이 없을 경우 앱 동작을 중단하거나, 메시지를 출력할 수 있습니다.
-    //카메라를 실행하기 위해서 Intent를 실행합니다.
+    //onRequestPermissionsResult() 함수를 override 후 권한 승인에 따른 이벤트를 확인
+    //즉 권한이 없을 경우 앱 동작을 중단하거나, 메시지를 출력
+    //카메라를 실행하기 위해서 Intent를 실행
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<out String>,
@@ -248,6 +251,7 @@ class Individualstudy : AppCompatActivity() {
     /////////////////////////////////////////////////////
     /////////////////////////////////////////////////////
 
+    //뒤로가기
     override fun onBackPressed() {
         startActivity(Intent(this, TargetMain::class.java))
         finish()

@@ -16,12 +16,14 @@ class TargetAdapter(val context: Context): RecyclerView.Adapter<TargetAdapter.Ta
     inner class TargetViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         var title = itemView.findViewById<TextView>(R.id.targetTitle)
         var targetContents = itemView.findViewById<TextView>(R.id.targetContents)
+        var timestamp=itemView.findViewById<TextView>(R.id.targetDate)
         var checkbox = itemView.findViewById<CheckBox>(R.id.cbCheck)
 
         fun onBind(data: Target) {
             title.text=data.title
             targetContents.text=data.contents
             checkbox.isChecked=data.isChecked
+            timestamp.text=data.timestamp
 
             if (data.isChecked) {
                 title.paintFlags=title.paintFlags or STRIKE_THRU_TEXT_FLAG
